@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>標茶町博物館「ニタイ・ト」｜森と湖のほとりの博物館</title>
+<meta name="description" content="北海道標茶町、塘路湖畔の町立博物館「ニタイ・ト」。約3,000点の昆虫標本、ヒグマやシマフクロウの剥製、アイヌ文化と開拓の歴史を一か所で。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lake:#17302F;
+  --lake-deep:#0F2221;
+  --indigo:#263250;
+  --brass:#B8935A;
+  --brass-soft:#D9C198;
+  --lichen:#E4E8DF;
+  --lichen-2:#D5DACD;
+  --mount:#F1F2EC;
+  --ink:#1C2321;
+  --ink-soft:#4A5450;
+  --serif:"Shippori Mincho","Yu Mincho","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Yu Gothic","Hiragino Kaku Gothic ProN",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--serif);color:var(--ink);background:var(--lichen);line-height:2;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{width:min(1080px,100% - 48px);margin-inline:auto}
+
+/* header */
+.site-head{position:absolute;inset:0 0 auto 0;z-index:5;padding:22px 0}
+.site-head .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.brand{font-weight:500;letter-spacing:.18em;font-size:15px;color:#fff;text-decoration:none}
+.site-head nav{display:flex;gap:28px;font-family:var(--sans);font-size:14px}
+.site-head nav a{color:#F1F2EC;text-decoration:none;padding:4px 0;border-bottom:1px solid transparent}
+.site-head nav a:hover{border-bottom-color:var(--brass-soft)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--lake-deep);color:#fff;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92;animation:settle 2.4s ease-out both}
+@keyframes settle{from{transform:scale(1.06)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,34,33,.88) 0%,rgba(15,34,33,.55) 45%,rgba(15,34,33,.12) 100%),linear-gradient(0deg,rgba(15,34,33,.7),transparent 35%)}
+.hero .wrap{position:relative;z-index:2;display:flex;align-items:stretch;gap:44px;padding:140px 0 110px}
+.hero-vert{writing-mode:vertical-rl;font-size:clamp(64px,10vw,132px);font-weight:500;letter-spacing:.14em;line-height:1.1;color:var(--brass-soft);border-left:1px solid rgba(217,193,152,.5);padding-left:26px}
+.hero-copy{align-self:flex-end;max-width:520px}
+.hero-copy .place{font-family:var(--sans);font-size:14px;letter-spacing:.12em;color:var(--brass-soft)}
+.hero-copy h1{font-size:clamp(30px,4.6vw,50px);font-weight:500;line-height:1.5;margin:10px 0 18px;letter-spacing:.06em}
+.hero-copy p{font-size:16px;color:#E4E8DF}
+.hero-cta{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;font-family:var(--sans);font-weight:500;font-size:15px;letter-spacing:.08em;text-decoration:none;padding:14px 30px;border:1px solid var(--brass);transition:background .25s,color .25s}
+.btn-solid{background:var(--brass);color:var(--lake-deep)}
+.btn-solid:hover{background:var(--brass-soft)}
+.btn-line{color:#fff}
+.btn-line:hover{background:rgba(184,147,90,.25)}
+
+/* sections */
+section{padding:112px 0}
+.sec-title{font-size:clamp(26px,3.4vw,38px);font-weight:500;letter-spacing:.1em;line-height:1.6;margin-bottom:28px}
+.lead{max-width:34em;color:var(--ink-soft)}
+.rule{width:64px;height:1px;background:var(--brass);margin:0 0 30px}
+
+/* about */
+.about{background:var(--lichen)}
+.about-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:72px;align-items:start}
+.about-word{font-size:clamp(40px,6vw,76px);font-weight:500;letter-spacing:.12em;color:var(--indigo);line-height:1.3}
+.about-word small{display:block;font-family:var(--sans);font-size:15px;letter-spacing:.1em;color:var(--ink-soft);margin-top:14px;font-weight:400}
+.about p+p{margin-top:1.2em}
+
+/* highlights */
+.highlights{background:var(--lake);color:#EEF0EA}
+.highlights .sec-title{color:#fff}
+.highlights .rule{background:var(--brass-soft)}
+.mount{background:var(--mount);padding:12px;border:1px solid var(--brass);box-shadow:0 0 0 6px rgba(15,34,33,.35)}
+.mount .ph{aspect-ratio:3/2;background:#2a403e;overflow:hidden}
+.mount.tall .ph{aspect-ratio:3/4}
+.mount .ph img{width:100%;height:100%;object-fit:cover;filter:sepia(.12) saturate(.92)}
+.mount figcaption{font-family:var(--sans);font-size:12px;color:var(--ink-soft);padding-top:10px;letter-spacing:.06em}
+.hl{display:grid;gap:64px;margin-top:64px}
+.hl-item{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:center}
+.hl-item.rev{grid-template-columns:.8fr 1.1fr}
+.hl-item.rev .mount{order:2}
+.hl-item h3{font-size:clamp(22px,2.6vw,30px);font-weight:500;letter-spacing:.08em;line-height:1.6;margin-bottom:14px;color:var(--brass-soft)}
+.hl-item p{color:#D9DDD4}
+.hl-bird{border-top:1px solid rgba(217,193,152,.45);border-bottom:1px solid rgba(217,193,152,.45);padding:40px 0;display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center}
+.hl-bird h3{font-size:clamp(22px,2.6vw,30px);font-weight:500;letter-spacing:.08em;line-height:1.6;color:var(--brass-soft)}
+.hl-bird p{color:#D9DDD4}
+
+/* exhibits */
+.exhibits{background:var(--mount)}
+.ex-list{margin-top:44px;border-top:1px solid var(--ink)}
+.ex-row{display:grid;grid-template-columns:230px 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--lichen-2)}
+.ex-row dt{font-size:20px;font-weight:500;letter-spacing:.1em;color:var(--indigo)}
+.ex-row dd{color:var(--ink-soft)}
+
+/* voices */
+.voices{background:var(--indigo);color:#EEF0EA}
+.voices .sec-title{color:#fff}
+.voice-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:40px;margin-top:48px}
+.voice{border:1px solid rgba(217,193,152,.5);padding:34px 34px 30px;background:rgba(15,34,33,.22)}
+.stars{color:var(--brass-soft);letter-spacing:.2em;font-size:19px;margin-bottom:12px}
+.voice p{font-size:16px;color:#E8EBE3}
+.voice .src{font-family:var(--sans);font-size:12px;color:var(--brass-soft);margin-top:14px;letter-spacing:.08em}
+
+/* access */
+.access{background:var(--lichen)}
+.access-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;margin-top:40px;align-items:start}
+.info{border-top:1px solid var(--ink)}
+.info div{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--lichen-2);font-size:16px}
+.info dt{font-family:var(--sans);font-weight:500;color:var(--indigo);font-size:14px;letter-spacing:.08em;padding-top:2px}
+.info a{text-underline-offset:4px}
+.map-frame{border:1px solid var(--brass);padding:10px;background:var(--mount)}
+.map-frame iframe{display:block;width:100%;height:420px;border:0;filter:sepia(.18) saturate(.85)}
+.map-btn{text-align:center;margin-top:20px}
+.map-btn .btn{background:var(--lake);color:#fff;border-color:var(--lake)}
+.map-btn .btn:hover{background:var(--indigo);border-color:var(--indigo)}
+
+/* contact */
+.contact{background:var(--lake-deep);color:#EEF0EA;text-align:center;padding:96px 0}
+.contact .sec-title{color:#fff}
+.contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:30px 0 36px}
+.contact .btn{color:#fff}
+.contact .btn:hover{background:rgba(184,147,90,.25)}
+.tel{font-size:clamp(28px,4vw,40px);letter-spacing:.1em;color:var(--brass-soft);text-decoration:none;font-weight:500}
+.sns{display:flex;justify-content:center;gap:18px;margin-top:34px}
+.sns a{width:52px;height:52px;border:1px solid var(--brass);border-radius:50%;display:grid;place-items:center;color:var(--brass-soft);transition:background .25s,color .25s}
+.sns a:hover{background:var(--brass);color:var(--lake-deep)}
+.sns svg{width:24px;height:24px;fill:currentColor}
+
+footer{background:#0A1817;color:#9DA9A3;font-family:var(--sans);font-size:12px;text-align:center;padding:26px 24px;line-height:1.9}
+
+@media (max-width:860px){
+  body{font-size:16px}
+  section{padding:80px 0}
+  .site-head nav{display:none}
+  .hero .wrap{gap:24px;padding:110px 0 70px}
+  .hero::after{background:linear-gradient(0deg,rgba(15,34,33,.92) 0%,rgba(15,34,33,.55) 55%,rgba(15,34,33,.25) 100%)}
+  .about-grid,.hl-item,.hl-item.rev,.hl-bird,.voice-grid,.access-grid{grid-template-columns:1fr;gap:32px}
+  .hl-item.rev .mount{order:0}
+  .ex-row{grid-template-columns:1fr;gap:4px}
+  .info div{grid-template-columns:84px 1fr}
+  .map-frame iframe{height:320px}
+}
+@media (max-width:520px){
+  .hero .wrap{flex-direction:column}
+  .hero-vert{writing-mode:horizontal-tb;border-left:0;border-bottom:1px solid rgba(217,193,152,.5);padding:0 0 12px;letter-spacing:.1em}
+  .hero-copy{align-self:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-img{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">標茶町博物館 ニタイ・ト</a>
+    <nav aria-label="ページ内メニュー">
+      <a href="#about">ニタイ・トとは</a>
+      <a href="#highlights">見どころ</a>
+      <a href="#voices">来館者の声</a>
+      <a href="#access">アクセス</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <img class="hero-img" src="images/1.jpg" alt="朝靄がかかる湖畔と森に佇む博物館のイメージ">
+    <div class="wrap">
+      <div class="hero-vert" aria-hidden="true">森と湖</div>
+      <div class="hero-copy">
+        <p class="place">北海道 標茶町 塘路湖畔</p>
+        <h1>森と湖のほとりで、<br>この土地の時間に出会う。</h1>
+        <p>標茶町博物館「ニタイ・ト」は、釧路湿原の自然と、アイヌ文化、開拓の歴史を一つの建物で辿れる町立博物館です。</p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#highlights">見どころを見る</a>
+          <a class="btn btn-line" href="#access">アクセス</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-word">
+        ニタイ・ト
+        <small>アイヌ語で「森と湖」</small>
+      </div>
+      <div>
+        <h2 class="sec-title">自然と歴史を、まるごと学ぶ場所</h2>
+        <div class="rule"></div>
+        <p>「ニタイ・ト」は、北海道川上郡標茶町にある町立博物館です。2018年7月、郷土館から現在の施設へ移転し、リニューアルオープンしました。</p>
+        <p>標茶町の自然や歴史、なかでもアイヌ文化と開拓時代の資料展示に力を入れています。塘路湖畔の自然環境の中で、地域の文化と自然を学べる場として設計されました。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights" id="highlights">
+    <div class="wrap">
+      <h2 class="sec-title">ニタイ・トの見どころ</h2>
+      <div class="rule"></div>
+      <p class="lead">昆虫標本から大型獣の剥製、湿原の鳥まで。標茶町の自然を間近に感じられる展示がそろっています。</p>
+
+      <div class="hl">
+        <article class="hl-item">
+          <figure class="mount">
+            <div class="ph"><img src="images/2.jpg" alt="整然と並ぶ昆虫標本の箱を真上から見たイメージ" loading="lazy"></div>
+            <figcaption>イメージ：標本箱に並ぶ昆虫たち</figcaption>
+          </figure>
+          <div>
+            <h3>約3,000点の昆虫標本<br>「飯島コレクション」</h3>
+            <p>ひとつひとつ丁寧に整えられた、約3,000点の昆虫標本。形や色の違いをじっくり見比べるうちに、標茶の森と湿原の豊かさが見えてきます。</p>
+          </div>
+        </article>
+
+        <article class="hl-item rev">
+          <figure class="mount tall">
+            <div class="ph"><img src="images/3.jpg" alt="薄暗い展示室に立つヒグマの剥製を見上げるイメージ" loading="lazy"></div>
+            <figcaption>イメージ：展示室の剥製</figcaption>
+          </figure>
+          <div>
+            <h3>目の前に立つ、<br>ヒグマ・エゾシカ・シマフクロウ</h3>
+            <p>ヒグマ、エゾシカ、シマフクロウなど、北海道の大地に生きる動物たちの剥製を展示しています。実物大の迫力は、写真や映像では味わえません。</p>
+          </div>
+        </article>
+
+        <article class="hl-bird">
+          <h3>釧路湿原の鳥を<br>屋内で観察</h3>
+          <p>釧路湿原に生息する鳥類のジオラマを楽しめる、屋内バードウォッチングコーナーがあります。天候を気にせず、野鳥の姿をゆっくり眺められます。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="exhibits" id="exhibits">
+    <div class="wrap">
+      <h2 class="sec-title">土地の記憶を辿る展示</h2>
+      <div class="rule"></div>
+      <p class="lead">約3,000点の昆虫標本や動植物標本に加え、古代から近代までの暮らしを伝える資料を多数展示しています。</p>
+      <dl class="ex-list">
+        <div class="ex-row"><dt>昆虫・動植物標本</dt><dd>約3,000点の昆虫標本をはじめ、標茶町に息づく動植物の標本を展示します。</dd></div>
+        <div class="ex-row"><dt>古代の土器</dt><dd>この地に人が暮らした長い時間を、出土した土器が静かに物語ります。</dd></div>
+        <div class="ex-row"><dt>アイヌ文化の資料</dt><dd>自然とともに生きてきたアイヌの人々の暮らしと道具を紹介します。</dd></div>
+        <div class="ex-row"><dt>明治以降の開拓の歴史</dt><dd>原野を切り拓いた人々の歩みを、資料から辿ることができます。</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="voices" id="voices">
+    <div class="wrap">
+      <h2 class="sec-title">来館者の声</h2>
+      <div class="rule" style="background:var(--brass-soft)"></div>
+      <div class="voice-grid">
+        <figure class="voice">
+          <div class="stars" aria-label="5段階中4の評価">★★★★☆</div>
+          <p>2023年に捕獲された世間を賑わせたヒグマOSO18に関する資料などが展示されております。一階は無料、2階は有料エリアになります。</p>
+          <div class="src">Googleマップの口コミより</div>
+        </figure>
+        <figure class="voice">
+          <div class="stars" aria-label="5段階中5の評価">★★★★★</div>
+          <p>建物の見た目はこじんまりとしていますが、観覧料220円とは思えないほど充実した資料の数々を見ることができます。縄文土器からアイヌ民族の道具類、近年話題となったoso18の展示などズラリ。スタッフさんに聞いたところ、熊や鹿などの動物はほとんど剥製とのこと。特に熊の剥製は目の前に立つと威圧感満載です。とても雰囲気のいい資料館です。</p>
+          <div class="src">Googleマップの口コミより</div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="access" id="access">
+    <div class="wrap">
+      <h2 class="sec-title">アクセス・ご利用案内</h2>
+      <div class="rule"></div>
+      <div class="access-grid">
+        <dl class="info">
+          <div><dt>施設名</dt><dd>標茶町博物館「ニタイ・ト」</dd></div>
+          <div><dt>住所</dt><dd>北海道川上郡標茶町字塘路原野北8線58番地9</dd></div>
+          <div><dt>電話</dt><dd><a href="tel:0154872332">015-487-2332</a></dd></div>
+          <div><dt>休館日</dt><dd>毎週月曜日（祝日が月曜日の場合、翌日休館）<br>年末年始（12月29日〜1月3日）</dd></div>
+          <div><dt>開館時間・観覧料</dt><dd>最新の情報は<a href="https://www.sip.or.jp/~shibecha-museum/" target="_blank" rel="noopener">公式サイト</a>をご確認ください。</dd></div>
+        </dl>
+        <div>
+          <div class="map-frame">
+            <iframe title="標茶町博物館ニタイ・トの地図" src="https://www.google.com/maps?q=北海道川上郡標茶町字塘路原野北8線58番地9&amp;output=embed&amp;hl=ja" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <div class="map-btn">
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=北海道川上郡標茶町字塘路原野北8線58番地9" target="_blank" rel="noopener">Googleマップで開く</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="sec-title">お問い合わせ</h2>
+      <a class="tel" href="tel:0154872332">015-487-2332</a>
+      <div class="contact-links">
+        <a class="btn" href="mailto:nitai-to@sip.or.jp">メールで問い合わせる</a>
+        <a class="btn" href="https://www.sip.or.jp/~shibecha-museum/contact.html" target="_blank" rel="noopener">問い合わせフォーム</a>
+        <a class="btn" href="https://www.sip.or.jp/~shibecha-museum/" target="_blank" rel="noopener">公式サイト</a>
+      </div>
+      <div class="sns">
+        <a href="https://www.instagram.com/nitai_to/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2"/></svg>
+        </a>
+        <a href="https://www.google.com/goto?url=CAESYwHrOzAVcUo_aL9PFL_FkLF0BxCli3FqA5Ey-oWnPEtoscn4nH4OGO0_uZaRaY7VFuCgCy7LrAAHOvOxSId6CGI3E7ee56GlYzUmOCD5w9vdx268zTgT5Ygmpv73qSHmVdHAVg" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.2v5.6l5-2.8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 標茶町博物館「ニタイ・ト」</p>
+  <p>ページ内の画像はイメージです。</p>
+</footer>
+
+</body>
+</html>
